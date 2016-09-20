@@ -1,5 +1,6 @@
 //SS2_Stephanie Cen 
 //Bubbles
+//Click the screen to start, click to make bubbles, press any key to reset
 
 //global variables
 Bubble b1;
@@ -45,10 +46,12 @@ void mouseClicked(){
    b1.process();
 }
 
+//click to start 
 void mousePressed() { 
  mode=1;
 }
 
+//make a new bubble 
 void keyPressed(){
   background(227,254,255);
   for (int i=0; i < BubbleList.size (); i=i+1) {
