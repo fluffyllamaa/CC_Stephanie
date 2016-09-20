@@ -1,5 +1,5 @@
-//Stephanie Cen 
-//SS2_Bubbles 
+//SS2_Stephanie Cen 
+//Bubbles
 
 //global variables
 Bubble b1;
