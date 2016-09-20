@@ -57,4 +57,7 @@ void keyPressed(){
   for (int i=0; i < BubbleList.size (); i=i+1) {
     BubbleList.get(i).state=DEAD;
   }
+  for (int g=0; g < 50; g=g+1) { 
+    BubbleList.add ( new Bubble() );
+  }
 }
