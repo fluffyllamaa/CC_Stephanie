@@ -51,13 +51,10 @@ void mousePressed() {
  mode=1;
 }
 
-//make a new bubble 
+//reset
 void keyPressed(){
   background(227,254,255);
   for (int i=0; i < BubbleList.size (); i=i+1) {
     BubbleList.get(i).state=DEAD;
-  }
-  for (int g=0; g < 50; g=g+1) { 
-    BubbleList.add ( new Bubble() );
   }
 }
