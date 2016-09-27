@@ -1,11 +1,6 @@
 //Stephanie 
-
-float a=0;
-float b=25;
-float c=0;
-float d=0; 
-float e=50; 
-float f=25; 
+//Stephanie_SS3
+//Colors and Shapes
 
 void setup() {
   size(1000,600);
@@ -19,20 +14,25 @@ void draw() {
     tab2();
     stroke(255);
     line(500,0, 500,height);
-    //triangle pattern
-   
-  
+    //circle pattern
+    fill(random(255),random(255),random(255));
+     ellipse(random(width/2),random(height),25,25);
   }  else if ((mouseX >= 625) && (mouseX < 750)) {
     background(209,255,227);
     tab3();
     stroke(255);
-    line(500, 0, 500, height);
+    line(500, 0, 500, height); 
+    textSize(35); 
+    fill(0); 
+    text("Click to change color",575,100);
     //sqaure pattern
      for (int i=0; i<=width/2; i=i+50){
      for (int h=0; h<=height; h=h+50){
-       //if (mousePressed == true){
-       fill(random(255),random(255),random(255));
-     //}
+       if (mousePressed == true){
+       fill(255,random(255),random(255));
+     } else if (mousePressed==false) { 
+        fill(random(255),255,random(255));
+     } 
       rect(i,h,50,50);
        }
      } 
@@ -50,10 +50,23 @@ void draw() {
     ellipse(random(width/2),random(height),25,25); 
    }
   }  else if ((mouseX>=875) && (mouseX <1000)) {
-    background(189,255,207);
+    background(189,255,207); 
     tab5();
     stroke(255);
     line(500,0,500,height); 
+    textSize(30); 
+    fill(0); 
+    text("Press any key to change color",530,100);
+    //square 
+    for (int s=500;s>=0;s=s-25){
+      if (keyPressed==true){
+      fill(255,random(255),255); 
+    } else if (keyPressed==false){
+      fill(255,255,random(255));
+    } 
+    rectMode(CENTER);
+     rect(250,height/2,s,s);
+    } 
   } else {
     background(229,255,249);
     tab1();
@@ -65,7 +78,7 @@ void draw() {
 void tab1() {
   //display text
   textSize(50);
-  text("Rollover each tab",50,300);
+  text("Rollover each tab",20,300);
   //tab 2
   fill(219,255,237);
   rect(width-500,0,125,height); 
@@ -111,3 +124,4 @@ void tab5() {
   fill(189,255,207);
   rect(width-125,0,125,height);
 } 
+
