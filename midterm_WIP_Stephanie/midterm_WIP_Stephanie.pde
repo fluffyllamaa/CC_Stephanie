@@ -63,3 +63,8 @@ void mouseClicked(){
     state=4;
   }
 }
+
+void keyPressed(){
+  fill(255);
+  state=1;
+}
