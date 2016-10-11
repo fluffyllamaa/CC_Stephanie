@@ -283,11 +283,11 @@ void mouseClicked() {
     } else if (mouseY <= 785 && mouseY >= 755) {
       state = 3.5;
     }
-  } /*else if (state == 3.4) {
+  } else if (state == 3.4) {
     if (mouseY <= 530 && mouseY >= 490) {
     state = 0.5;
-    }*/
-  }else if (state == 3.5){
+    }
+  else if (state == 3.5){
     if (mouseY <= 775 && mouseY >= 725) {
     state = 0; 
     }
