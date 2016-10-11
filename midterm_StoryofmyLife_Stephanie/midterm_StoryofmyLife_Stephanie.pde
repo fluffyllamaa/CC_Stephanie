@@ -161,7 +161,8 @@ void draw() {
     background(255); 
     textSize(30);
     text("End of Day 1.", width/2, height/2); 
-    text("Click here to go to home screen.",width/2,500);
+    text("To be Continued.",width/2,500);
+    //text("Click here to go to home screen.",width/2,500);
   }
   if (state == 3.5) { //don't do it
   textAlign(BOTTOM);
@@ -282,10 +283,10 @@ void mouseClicked() {
     } else if (mouseY <= 785 && mouseY >= 755) {
       state = 3.5;
     }
-  } else if (state == 3.4) {
+  } /*else if (state == 3.4) {
     if (mouseY <= 530 && mouseY >= 490) {
     state = 0.5;
-    }
+    }*/
   }else if (state == 3.5){
     if (mouseY <= 775 && mouseY >= 725) {
     state = 0; 
