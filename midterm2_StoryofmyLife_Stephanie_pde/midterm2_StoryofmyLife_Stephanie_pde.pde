@@ -212,7 +212,7 @@ void draw() {
     checkText("So, you completed just ONE of the possible endings. That wasn't so bad  right?", mx1, my1, x1, y1, h1); 
     checkText("But, are you interested in the other endings that you missed out on?", mx1, my1 + 125, x1, y1 + 100, h1);
     checkText("Then, click the button below.     It'll randomly bring you to another   ending.", mx1, my1 + 225, x1, y1 + 225, h1);
-    checkText("You may not see all them, so      restart after clicking the button once!", mx1, my1 + 350, x1, y1 + 350, h1); 
+    checkText("You may not see all , so please   restart the game after clicking the   button once!", mx1, my1 + 350, x1, y1 + 350, h1); 
     textOptions("Click here.", 0, 715, width, 30, textHeight);
   }
 }
