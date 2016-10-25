@@ -18,10 +18,10 @@ class Bubble {
   Bubble(float start1, float start2) {
     x= start1;
     y= start2;
-    dy= random(-2,-1);
+    dy= random(-2, -1);
     radius=100;
-    stroke(174,244,250,75);
-    fill(174,244,250,75);
+    stroke(174, 244, 250, 75);
+    fill(174, 244, 250, 75);
   }
 
   //methods
@@ -53,7 +53,7 @@ class Bubble {
       radius=0;
     }
   }
-
+/*
   void checkPop(ArrayList <Bubble> BubbleList) { //check to see if bubbles pop or not
     for (int i=0; i < BubbleList.size (); i ++) {
       if ( state == MOVING && isTouching(BubbleList.get(i))) {
@@ -61,12 +61,12 @@ class Bubble {
       }
     }
   }
-  
+
   boolean isTouching(Bubble other) {
-    if (dist(start1, start2, other.x, other.y) <= (mradius + other.radius)) {
+    if (dist(start1, start2, other.x, other.y) == 0) {
       return true;
     } else {
       return false;
     }
-  }
+  } */
 } //end class

@@ -39,16 +39,15 @@ void draw() {
   }
 }
 
-  //make new bubbles 
-void mouseClicked(){
-   b1=new Bubble(mouseX,mouseY);
-   BubbleList.add(b1);
-   b1.state=MOVING;
-   b1.display();
-   b1.process();
-   b1.bounce();
+//make new bubbles 
+void mouseClicked() {
+  b1=new Bubble(mouseX, mouseY);
+  BubbleList.add(b1);
+  b1.state=MOVING;
+  b1.display();
+  b1.process();
+  b1.bounce();
 }
-
 
 //click to start 
 void mousePressed() { 
