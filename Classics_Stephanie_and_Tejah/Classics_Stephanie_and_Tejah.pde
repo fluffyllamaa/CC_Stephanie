@@ -1,8 +1,8 @@
+//Original Class made by Lauren and Christy. We added the process method and changed the fall method.
+//We also changed the size of the arrayList and made it into an oject ArrayList instead of having it as a set arrayList.
 //names image
 PImage pizzaman;
 ArrayList <Pizza> pizzaList; 
-
-
 
 void setup() {
   //load pizzaman image

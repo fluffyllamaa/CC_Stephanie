@@ -6,7 +6,7 @@ class Pizza {
   int diameter1;
   int state; 
   int DEAD = 0; 
-
+  
   //constructor
   //constructor arguments are temp- used to initialize variables in object
   Pizza(int tempX, int tempY, int tempDiameter, int tempDiameter1) {
@@ -43,6 +43,7 @@ void process(){
     y = height + 200;
     diameter = 0; 
     diameter1 = 0; 
+   
   }
 }
 
