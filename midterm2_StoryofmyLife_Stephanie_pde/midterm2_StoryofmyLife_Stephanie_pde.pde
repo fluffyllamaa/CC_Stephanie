@@ -26,10 +26,20 @@ boolean userOption14;
 boolean userOption15;
 boolean userOption16;
 boolean userOption17;
+boolean ending0;
+boolean ending1;
+boolean ending2;
+boolean ending3;
+boolean ending4;
+boolean ending5;
+
+void reset() {
+  setup();
+}
+
 
 void setup() {
   size(500, 800);
-  //messagesScreen();
 }
 
 void draw() {
@@ -164,6 +174,9 @@ void draw() {
   if (state == 6) {
     if (userOption11 == true) {
       textOptionsReset();
+      messagesScreenReset();
+      checkTextUser("No, stand up and say something!", mx1, my1, x1, y1, h1); // user option 9
+      checkText("I decided to ask for a divorce...  but, he doesn't want it.", mx1, my1 + 50, x1, y1 + 25, h1); 
       checkTextUser("Don't divorce.", mx1, my1 + 150, x1, y1 + 150, h1);  //user option 13
       checkText("Well, things got better. We're stilltogether with our kids and we're    happy. My hubby changed for us. (:", mx1, my1 + 200, x1, y1 + 200, h1); // ending
       textOptions("Click here.", 0, 735, width, 30, textHeight + 20);
@@ -171,39 +184,122 @@ void draw() {
     if (userOption12 == true) {
       textOptionsReset();
       messagesScreenReset();
+      checkTextUser("No, stand up and say something!", mx1, my1, x1, y1, h1); // user option 9
+      checkText("I decided to ask for a divorce...  but, he doesn't want it.", mx1, my1 + 50, x1, y1 + 25, h1); 
       checkTextUser("Get a divorce!", mx1, my1 + 150, x1, y1 + 150, h1); //user option 12
       checkText("So, after the divorce, I was able  to move in with a family friend.", mx1, my1 + 200, x1, y1 + 175, h1); 
       checkText("I'm living with my kids at their    place. Things definitely got better and I'm happy living my life with my kids.", mx1, my1 + 275, x1, y1 + 275, h1); //ending
       textOptions("Click here.", 0, 735, width, 30, textHeight + 20);
     }
+    if (ending0 == true) {
+      checkTextUser("No, stand up and say something!", mx1, my1, x1, y1, h1); // user option 9
+      checkText("I decided to ask for a divorce...  but, he doesn't want it.", mx1, my1 + 50, x1, y1 + 25, h1); 
+      checkTextUser("Get a divorce!", mx1, my1 + 150, x1, y1 + 150, h1); //user option 12
+      checkText("So, after the divorce, I was able  to move in with a family friend.", mx1, my1 + 200, x1, y1 + 175, h1); 
+      checkText("I'm living with my kids at their    place. Things definitely got better and I'm happy living my life with my kids.", mx1, my1 + 275, x1, y1 + 275, h1); //ending
+      checkText("Press 'R' to exit.", 0, 715, width, 30, textHeight);
+    }
+
+    if (ending1 == true) {
+       checkTextUser("No, stand up and say something!", mx1, my1, x1, y1, h1); // user option 9
+      checkText("I decided to ask for a divorce...  but, he doesn't want it.", mx1, my1 + 50, x1, y1 + 25, h1); 
+      checkTextUser("Don't divorce.", mx1, my1 + 150, x1, y1 + 150, h1);  //user option 13
+      checkText("Well, things got better. We're stilltogether with our kids and we're    happy. My hubby changed for us. (:", mx1, my1 + 200, x1, y1 + 200, h1); // ending
+      checkText("Press 'R' to exit.", 0, 715, width, 30, textHeight);
+    }
   }
   if (state == 7) {
     if (userOption13 == true) {
       textOptionsReset();
-      checkTextUser("DIVORCE GIRL!", mx1, my1 + 175, x1, y1 + 175, h1);  //user option 11
-      checkText("I did, I took this to court. I have custody over the kids now. But, now I don't know what to do next", mx1, my1 + 225, x1, y1 + 225, h1); // ending
+      messagesScreenReset();
+      checkTextUser("Of course, wait it out a bit more.", mx1, my1, x1, y1, h1); //user option 10
+      checkText("We're still arguing whenever he    comes back.", mx1, my1 + 50, x1, y1 + 25, h1); 
+      checkText("He's even hitting them...what do I do?", mx1, my1 + 125, x1, y1 + 125, h1); 
+      checkTextUser("DIVORCE GIRL!", mx1, my1 + 175, x1, y1 + 175, h1);  //user option 13
+      checkText("I did, I took this to court. I      have custody over the kids now.But, now I don't know what to do next.", mx1, my1 + 225, x1, y1 + 225, h1); // ending
       textOptions("Click here.", 0, 735, width, 30, textHeight + 20);
     }
     if (userOption14 == true) {
       textOptionsReset();
+      messagesScreenReset();
+      checkTextUser("Of course, wait it out a bit more.", mx1, my1, x1, y1, h1); //user option 10
+      checkText("We're still arguing whenever he    comes back.", mx1, my1 + 50, x1, y1 + 25, h1); 
+      checkText("He's even hitting them...what do I do?", mx1, my1 + 125, x1, y1 + 125, h1); 
       checkTextUser("WAIT! Talk to him!", mx1, my1 + 175, x1, y1 + 175, h1); //user option 14
       checkText("Well, I DID talk to him. But, guess what?", mx1, my1 + 225, x1, y1 + 225, h1); 
       checkText("His family kicked me out. And,      ironically, I now live on the       second floor of my ex's     house.", mx1, my1 + 275, x1, y1 + 275, h1);  // ending
       textOptions("Click here.", 0, 735, width, 30, textHeight + 20);
     }
+    if (ending2 == true) {
+      checkTextUser("Of course, wait it out a bit more.", mx1, my1, x1, y1, h1); //user option 10
+      checkText("We're still arguing whenever he    comes back.", mx1, my1 + 50, x1, y1 + 25, h1); 
+      checkText("He's even hitting them...what do I do?", mx1, my1 + 125, x1, y1 + 125, h1); 
+      checkTextUser("DIVORCE GIRL!", mx1, my1 + 175, x1, y1 + 175, h1);  //user option 13
+      checkText("I did, I took this to court. I      have custody over the kids now.But, now I don't know what to do next.", mx1, my1 + 225, x1, y1 + 225, h1); // ending
+       checkText("Press 'R' to exit.", 0, 715, width, 30, textHeight);
+    }
+
+
+    if (ending3 == true) {
+      checkTextUser("Of course, wait it out a bit more.", mx1, my1, x1, y1, h1); //user option 10
+      checkText("We're still arguing whenever he    comes back.", mx1, my1 + 50, x1, y1 + 25, h1); 
+      checkText("He's even hitting them...what do I do?", mx1, my1 + 125, x1, y1 + 125, h1); 
+      checkTextUser("WAIT! Talk to him!", mx1, my1 + 175, x1, y1 + 175, h1); //user option 14
+      checkText("Well, I DID talk to him. But, guess what?", mx1, my1 + 225, x1, y1 + 225, h1); 
+      checkText("His family kicked me out. And,      ironically, I now live on the       second floor of my ex's     house.", mx1, my1 + 275, x1, y1 + 275, h1);  // ending
+       checkText("Press 'R' to exit.", 0, 715, width, 30, textHeight);
+    }
   }
   if (state == 8) {
     if (userOption15 == true) {
+      messagesScreenReset();
       textOptionsReset();
+      checkTextUser("I'll help.", mx1, my1, x1, y1, h1);
+      checkText("So, I'm happily married with four kids. My husband goes back and forth  between Puerto Rico and NYC.", mx1, my1 + 50, x1, y1 + 50, h1);
+      checkText("He's asking if I want to go with   him, should I?", mx1, my1 + 175, x1, y1 + 150, h1);
+      checkTextUser("You should go with him to PR.", mx1, my1 + 250, x1, y1 + 250, h1);
+      checkText("So, I went to PR with my kids. My hubby and I still argue, but it's     nothing major.", mx1, my1 + 300, x1, y1 + 300, h1);
+      checkText("But, I'm not happy working in the  family restaurant forever...", mx1, my1 + 425, x1, y1 + 400, h1);
       checkTextUser("Stay!", mx1, my1 + 500, x1, y1 + 500, h1);  //user option 11
       checkText("You're right. I should be content  with my life right now.", mx1, my1 + 550, x1, y1 + 525, h1); // ending
       textOptions("Click here.", 0, 735, width, 30, textHeight + 20);
     }
     if (userOption16 == true) {
+      messagesScreenReset();
       textOptionsReset();
+      checkTextUser("I'll help.", mx1, my1, x1, y1, h1);
+      checkText("So, I'm happily married with four kids. My husband goes back and forth  between Puerto Rico and NYC.", mx1, my1 + 50, x1, y1 + 50, h1);
+      checkText("He's asking if I want to go with   him, should I?", mx1, my1 + 175, x1, y1 + 150, h1);
+      checkTextUser("You should go with him to PR.", mx1, my1 + 250, x1, y1 + 250, h1);
+      checkText("So, I went to PR with my kids. My hubby and I still argue, but it's     nothing major.", mx1, my1 + 300, x1, y1 + 300, h1);
+      checkText("But, I'm not happy working in the  family restaurant forever...", mx1, my1 + 425, x1, y1 + 400, h1);
       checkTextUser("Leave!", mx1, my1 + 500, x1, y1 + 500, h1); //user option 14
       checkText("I left and went back to my hometown in Venezuela with my kids. (:", mx1, my1 + 550, x1, y1 + 525, h1); //ending
       textOptions("Click here.", 0, 735, width, 30, textHeight + 20);
+    }
+    if (ending4 == true) {
+      checkTextUser("I'll help.", mx1, my1, x1, y1, h1);
+      checkText("So, I'm happily married with four kids. My husband goes back and forth  between Puerto Rico and NYC.", mx1, my1 + 50, x1, y1 + 50, h1);
+      checkText("He's asking if I want to go with   him, should I?", mx1, my1 + 175, x1, y1 + 150, h1);
+      checkTextUser("You should go with him to PR.", mx1, my1 + 250, x1, y1 + 250, h1);
+      checkText("So, I went to PR with my kids. My hubby and I still argue, but it's     nothing major.", mx1, my1 + 300, x1, y1 + 300, h1);
+      checkText("But, I'm not happy working in the  family restaurant forever...", mx1, my1 + 425, x1, y1 + 400, h1);
+      checkTextUser("Stay!", mx1, my1 + 500, x1, y1 + 500, h1);  //user option 11
+      checkText("You're right. I should be content  with my life right now.", mx1, my1 + 550, x1, y1 + 525, h1); // ending
+       checkText("Press 'R' to exit.", 0, 715, width, 30, textHeight);
+    }
+
+
+    if (ending5 == true) {
+      checkTextUser("I'll help.", mx1, my1, x1, y1, h1);
+      checkText("So, I'm happily married with four kids. My husband goes back and forth  between Puerto Rico and NYC.", mx1, my1 + 50, x1, y1 + 50, h1);
+      checkText("He's asking if I want to go with   him, should I?", mx1, my1 + 175, x1, y1 + 150, h1);
+      checkTextUser("You should go with him to PR.", mx1, my1 + 250, x1, y1 + 250, h1);
+      checkText("So, I went to PR with my kids. My hubby and I still argue, but it's     nothing major.", mx1, my1 + 300, x1, y1 + 300, h1);
+      checkText("But, I'm not happy working in the  family restaurant forever...", mx1, my1 + 425, x1, y1 + 400, h1);
+      checkTextUser("Leave!", mx1, my1 + 500, x1, y1 + 500, h1); //user option 14
+      checkText("I left and went back to my hometown in Venezuela with my kids. (:", mx1, my1 + 550, x1, y1 + 525, h1); //ending
+       checkText("Press 'R' to exit.", 0, 715, width, 30, textHeight);
     }
   } 
   if (state == 9) { //ending sequence 
@@ -212,7 +308,7 @@ void draw() {
     checkText("So, you completed just ONE of the possible endings. That wasn't so bad  right?", mx1, my1, x1, y1, h1); 
     checkText("But, are you interested in the other endings that you missed out on?", mx1, my1 + 125, x1, y1 + 100, h1);
     checkText("Then, click the button below.     It'll randomly bring you to another   ending.", mx1, my1 + 225, x1, y1 + 225, h1);
-    checkText("You may not see all , so please   restart the game after clicking the   button once!", mx1, my1 + 350, x1, y1 + 350, h1); 
+    checkText("You may not see all , so please   exit the game after clicking the       button once or twice!", mx1, my1 + 350, x1, y1 + 350, h1); 
     textOptions("Click here.", 0, 715, width, 30, textHeight);
   }
 }
@@ -451,49 +547,78 @@ void mouseClicked() {
   } else if (state == 9) {
     if (mouseY < 745 && mouseY >= 715) { //random ending generator
       boolean[] options = new boolean[6];
-      options[0] = userOption11;
-      options[1] = userOption12;
-      options[2] = userOption13;
-      options[3] = userOption14;
-      options[4] = userOption15;
-      options[5] = userOption16;
+      options[0] = ending0;
+      options[1] = ending1;
+      options[2] = ending2;
+      options[3] = ending3;
+      options[4] = ending4;
+      options[5] = ending5;
       int s = int(random(1, 3));
-      int num = int(random(1, 6));
-      //fill(0);
-      //textSize(25);
-      //text("Press 'R' to start over.", mx1, y1); 
-      //checkText("Click here to start over.", mx1, my1, x1, y1, h1);
+      int num = int(random(1, 2));
       if (s == 1) {
         messagesScreenReset();
+        textOptionsReset();
         state =  6;
+        
         if (num == 1) {
           options[0] = true;
+          //textOptions("Press 'R' to exit.", 0, 715, width, 30, textHeight);
           // textOptions("Click here to start over.", 0, 755, width, 30, textHeight);
         } else if (num == 2) {
           options[1] = true;
+          //textOptions("Press 'R' to exit.", 0, 715, width, 30, textHeight);
           //textOptions("Click here to start over.", 0, 755, width, 30, textHeight);
         }
+        fill(0);
+        textSize(25);
+          //textOptions("Press 'R' to exit.", 0, 715, width, 30, textHeight);
+        //text("Press 'R' to exit.", width/2, y1);
       } else if (s == 2) {
         messagesScreenReset();
+        textOptionsReset();
         state = 7;
-        if (num == 3) {
+        fill(0);
+        textSize(25);
+        //text("Press 'R' to exit.", width/2, y1);
+        if (num == 1) {
           options[2] = true;
+          //textOptions("Press 'R' to exit.", 0, 715, width, 30, textHeight);
           //textOptions("Click here to start over.", 0, 755, width, 30, textHeight);
-        } else if (num == 4) {
+        } else if (num == 2) {
           options[3] = true;
+          //textOptions("Press 'R' to exit.", 0, 715, width, 30, textHeight);
           //  textOptions("Click here to start over.", 0, 755, width, 30, textHeight);
         }
+       // textOptions("Press 'R' to exit.", 0, 715, width, 30, textHeight);
       } else if (s == 3) {
         messagesScreenReset();
+        textOptionsReset();
         state = 8;
-        if (num == 5) {
+           fill(0);
+        textSize(25);
+        //text("Press 'R' to exit.", width/2, y1); 
+        if (num == 1) {
           options[4] = true;
+         // textOptions("Press 'R' to exit.", 0, 715, width, 30, textHeight);
           //textOptions("Click here to start over.", 0, 755, width, 30, textHeight);
-        } else if (num == 6) {
+        } else if (num == 2) {
           options[5] = true;
+          //textOptions("Press 'R' to exit.", 0, 715, width, 30, textHeight);
           //  textOptions("Click here to start over.", 0, 755, width, 30, textHeight);
         }
+       // textOptions("Press 'R' to exit.", 0, 715, width, 30, textHeight);
       }
+      
+        println(s, num, state);
+    }
+  }
+}
+
+
+void keyPressed() {
+  if (keyPressed) {
+    if (key == 'R' || key == 'r') {
+      exit();
     }
   }
 }
