@@ -96,7 +96,7 @@ void draw() {
       textSize(25);
       fill(0);
       checkText("Well, thank you for at least trying this game.", mx1, my1, x1, y1 - 25, h1 );
-      checkText("Click here to start over.", mx1, my1 + 100, x1, y1 + 100, h1);
+      checkText("Click here to exit.", mx1, my1 + 100, x1, y1 + 100, h1);
     }
   }
   if (state == 3) {
@@ -116,7 +116,7 @@ void draw() {
       textSize(25);
       fill(0);
       checkText("Well, thank you for at least trying this game.", mx1, my1, x1, y1 - 25, h1 );
-      checkText("Click here to start over.", mx1, my1 + 100, x1, y1 + 100, h1);
+      checkText("Click here to exit.", mx1, my1 + 100, x1, y1 + 100, h1);
     }
   }
   if (state == 4) {
@@ -308,7 +308,7 @@ void draw() {
     checkText("So, you completed just ONE of the possible endings. That wasn't so bad  right?", mx1, my1, x1, y1, h1); 
     checkText("But, are you interested in the other endings that you missed out on?", mx1, my1 + 125, x1, y1 + 100, h1);
     checkText("Then, click the button below.     It'll randomly bring you to another   ending.", mx1, my1 + 225, x1, y1 + 225, h1);
-    checkText("You may not see all , so please   exit the game after clicking the       button once or twice!", mx1, my1 + 350, x1, y1 + 350, h1); 
+    checkText("You may not see all , so please   press R to exit the game after        clicking the button once!", mx1, my1 + 350, x1, y1 + 350, h1); 
     textOptions("Click here.", 0, 715, width, 30, textHeight);
   }
 }
