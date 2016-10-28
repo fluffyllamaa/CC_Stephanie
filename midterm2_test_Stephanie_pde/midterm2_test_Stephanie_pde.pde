@@ -35,9 +35,25 @@ boolean ending5;
 
 void reset() {
   state = 0; 
+userOption1 = false; 
+userOption2=false;
+userOption3=false; 
+userOption4=false;
+userOption5=false;
+userOption6=false;
+userOption7=false;
+userOption8=false;
+userOption9=false;
+userOption10=false;
+userOption11=false;
+userOption12=false;
+userOption13=false;
+userOption14=false;
+userOption15=false;
+userOption16=false;
+userOption17=false;
   println(state);
 }
-
 
 void setup() {
   size(500, 800);
@@ -47,7 +63,7 @@ void draw() {
   if (state == 0) { 
     lockScreen();
   } 
-  if (state == 1) {
+   if (state == 1) {
     messagesScreen();
     textSize(20); 
     text("Blocked Number", 175, 40);
@@ -81,7 +97,7 @@ void draw() {
       state = 3; //change to third state
     }
   }
-  if (state == 2) {
+   if (state == 2) {
     if (userOption3 == true) {
       messagesScreenReset();
       checkTextUser("I'll help.", mx1, my1, x1, y1, h1);
@@ -100,7 +116,7 @@ void draw() {
       checkText("Click here to exit.", mx1, my1 + 100, x1, y1 + 100, h1);
     }
   }
-  if (state == 3) {
+   if (state == 3) {
     if (userOption5 == true) {
       textOptionsReset();
       messagesScreenReset();
@@ -120,7 +136,7 @@ void draw() {
       checkText("Click here to exit.", mx1, my1 + 100, x1, y1 + 100, h1);
     }
   }
-  if (state == 4) {
+   if (state == 4) {
     if (userOption7 == true) {
       textOptionsReset();
       messagesScreenReset();
@@ -149,7 +165,7 @@ void draw() {
       state = 8; //chane to 8th state
     }
   }
-  if (state == 5) {
+   if (state == 5) {
     if (userOption9 == true) {
       textOptionsReset();
       messagesScreenReset();
@@ -172,7 +188,7 @@ void draw() {
       state = 7; //change to 7th state
     }
   }
-  if (state == 6) {
+   if (state == 6) {
     if (userOption11 == true) {
       textOptionsReset();
       messagesScreenReset();
@@ -209,7 +225,7 @@ void draw() {
       checkText("Press 'R' to exit.", 0, 715, width, 30, textHeight);
     }
   }
-  if (state == 7) {
+   if (state == 7) {
     if (userOption13 == true) {
       textOptionsReset();
       messagesScreenReset();
@@ -249,7 +265,7 @@ void draw() {
       checkText("Press 'R' to exit.", 0, 715, width, 30, textHeight);
     }
   }
-  if (state == 8) {
+   if (state == 8) {
     if (userOption15 == true) {
       messagesScreenReset();
       textOptionsReset();
@@ -301,7 +317,7 @@ void draw() {
       checkText("Press 'R' to exit.", 0, 715, width, 30, textHeight);
     }
   } 
-  if (state == 9) { //ending sequence 
+   if (state == 9) { //ending sequence 
     messagesScreenReset(); 
     textOptionsReset();
     checkText("So, you completed just ONE of the possible endings. That wasn't so bad  right?", mx1, my1, x1, y1, h1); 

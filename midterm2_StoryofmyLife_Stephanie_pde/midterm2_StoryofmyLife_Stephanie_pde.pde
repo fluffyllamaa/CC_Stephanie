@@ -35,6 +35,23 @@ boolean ending5;
 
 void reset() {
   state = 0; 
+  userOption1 = false; 
+  userOption2=false;
+  userOption3=false; 
+  userOption4=false;
+  userOption5=false;
+  userOption6=false;
+  userOption7=false;
+  userOption8=false;
+  userOption9=false;
+  userOption10=false;
+  userOption11=false;
+  userOption12=false;
+  userOption13=false;
+  userOption14=false;
+  userOption15=false;
+  userOption16=false;
+  userOption17=false;
   println(state);
 }
 
@@ -97,7 +114,7 @@ void draw() {
       textSize(25);
       fill(0);
       checkText("Well, thank you for at least trying this game.", mx1, my1, x1, y1 - 25, h1 );
-      checkText("Click here to exit.", mx1, my1 + 100, x1, y1 + 100, h1);
+      checkText("Click here to restart.", mx1, my1 + 100, x1, y1 + 100, h1);
     }
   }
   if (state == 3) {
@@ -117,7 +134,7 @@ void draw() {
       textSize(25);
       fill(0);
       checkText("Well, thank you for at least trying this game.", mx1, my1, x1, y1 - 25, h1 );
-      checkText("Click here to exit.", mx1, my1 + 100, x1, y1 + 100, h1);
+      checkText("Click here to restart.", mx1, my1 + 100, x1, y1 + 100, h1);
     }
   }
   if (state == 4) {
@@ -198,7 +215,7 @@ void draw() {
       checkTextUser("Get a divorce!", mx1, my1 + 150, x1, y1 + 150, h1); //user option 12
       checkText("So, after the divorce, I was able  to move in with a family friend.", mx1, my1 + 200, x1, y1 + 175, h1); 
       checkText("I'm living with my kids at their    place. Things definitely got better and I'm happy living my life with my kids.", mx1, my1 + 275, x1, y1 + 275, h1); //ending
-      checkText("Press 'R' to exit.", 0, 715, width, 30, textHeight);
+      checkText("Press 'R' to reset.", 0, 715, width, 30, textHeight);
     }
 
     if (ending1 == true) {
@@ -206,7 +223,7 @@ void draw() {
       checkText("I decided to ask for a divorce...  but, he doesn't want it.", mx1, my1 + 50, x1, y1 + 25, h1); 
       checkTextUser("Don't divorce.", mx1, my1 + 150, x1, y1 + 150, h1);  //user option 13
       checkText("Well, things got better. We're stilltogether with our kids and we're    happy. My hubby changed for us. (:", mx1, my1 + 200, x1, y1 + 200, h1); // ending
-      checkText("Press 'R' to exit.", 0, 715, width, 30, textHeight);
+      checkText("Press 'R' to reset.", 0, 715, width, 30, textHeight);
     }
   }
   if (state == 7) {
@@ -237,7 +254,7 @@ void draw() {
       checkText("He's even hitting them...what do I do?", mx1, my1 + 125, x1, y1 + 125, h1); 
       checkTextUser("DIVORCE GIRL!", mx1, my1 + 175, x1, y1 + 175, h1);  //user option 13
       checkText("I did, I took this to court. I      have custody over the kids now.But, now I don't know what to do next.", mx1, my1 + 225, x1, y1 + 225, h1); // ending
-      checkText("Press 'R' to exit.", 0, 715, width, 30, textHeight);
+      checkText("Press 'R' to reset.", 0, 715, width, 30, textHeight);
     }
     if (ending3 == true) {
       checkTextUser("Of course, wait it out a bit more.", mx1, my1, x1, y1, h1); //user option 10
@@ -246,7 +263,7 @@ void draw() {
       checkTextUser("WAIT! Talk to him!", mx1, my1 + 175, x1, y1 + 175, h1); //user option 14
       checkText("Well, I DID talk to him. But, guess what?", mx1, my1 + 225, x1, y1 + 225, h1); 
       checkText("His family kicked me out. And,      ironically, I now live on the       second floor of my ex's     house.", mx1, my1 + 275, x1, y1 + 275, h1);  // ending
-      checkText("Press 'R' to exit.", 0, 715, width, 30, textHeight);
+      checkText("Press 'R' to reset.", 0, 715, width, 30, textHeight);
     }
   }
   if (state == 8) {
@@ -285,7 +302,7 @@ void draw() {
       checkText("But, I'm not happy working in the  family restaurant forever...", mx1, my1 + 425, x1, y1 + 400, h1);
       checkTextUser("Stay!", mx1, my1 + 500, x1, y1 + 500, h1);  //user option 11
       checkText("You're right. I should be content  with my life right now.", mx1, my1 + 550, x1, y1 + 525, h1); // ending
-      checkText("Press 'R' to exit.", 0, 715, width, 30, textHeight);
+      checkText("Press 'R' to reset.", 0, 715, width, 30, textHeight);
     }
 
 
@@ -298,7 +315,7 @@ void draw() {
       checkText("But, I'm not happy working in the  family restaurant forever...", mx1, my1 + 425, x1, y1 + 400, h1);
       checkTextUser("Leave!", mx1, my1 + 500, x1, y1 + 500, h1); //user option 14
       checkText("I left and went back to my hometown in Venezuela with my kids. (:", mx1, my1 + 550, x1, y1 + 525, h1); //ending
-      checkText("Press 'R' to exit.", 0, 715, width, 30, textHeight);
+      checkText("Press 'R' to reset.", 0, 715, width, 30, textHeight);
     }
   } 
   if (state == 9) { //ending sequence 
@@ -498,7 +515,7 @@ void mouseClicked() {
     } else if (mouseY <= 785 && mouseY >= 755) { //user option 4
       userOption4 = true;
     } else if (mouseY > 175 && mouseY < 230) {
-      exit();
+      reset();
     }
   } else if (state == 3) {
     if (mouseY <= 745 && mouseY >= 715) { //user option 5
@@ -506,7 +523,7 @@ void mouseClicked() {
     } else if (mouseY <= 785 && mouseY >= 755) { //user option 6
       userOption6 = true;
     } else if (mouseY > 175 && mouseY < 230) {
-      exit();
+      reset();
     }
   } else if (state == 4) {
     if (mouseY <= 745 && mouseY >= 715) { //user option 7
@@ -569,10 +586,10 @@ void mouseClicked() {
         textOptionsReset();
         state = 7;
         if (num == 1) {
-           textOptions("Click again.", 0, 715, width, 30, textHeight);
+          textOptions("Click again.", 0, 715, width, 30, textHeight);
           options[2] = true;
         } else if (num == 2) {
-           textOptions("Click again.", 0, 715, width, 30, textHeight);
+          textOptions("Click again.", 0, 715, width, 30, textHeight);
           options[3] = true;
         }
       } else if (s == 3) {
@@ -580,10 +597,10 @@ void mouseClicked() {
         textOptionsReset();
         state = 8;
         if (num == 1) {
-           textOptions("Click again.", 0, 715, width, 30, textHeight);
+          textOptions("Click again.", 0, 715, width, 30, textHeight);
           options[4] = true;
         } else if (num == 2) {
-           textOptions("Click again.", 0, 715, width, 30, textHeight);
+          textOptions("Click again.", 0, 715, width, 30, textHeight);
           options[5] = true;
         }
       }
@@ -596,7 +613,6 @@ void mouseClicked() {
 void keyPressed() {
   if (keyPressed) {
     if (key == 'R' || key == 'r') {
-      //exit();
       reset();
     }
   }
