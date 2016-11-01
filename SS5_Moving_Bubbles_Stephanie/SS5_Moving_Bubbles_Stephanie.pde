@@ -1,3 +1,6 @@
+//Moving Bubbles 
+//Stephanie
+//This sketch makes bubbles whenevver someone moves in front of the screen, although the movement must be drastic. 
 
 import processing.video.*; //importing video library 
 Bubble b1; 

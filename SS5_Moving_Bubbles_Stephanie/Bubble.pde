@@ -18,7 +18,8 @@ class Bubble {
   Bubble(float start1, float start2, float r) {
     x= start1;
     y= start2;
-    dy= random(-2, -1);
+    //dy= random(-2, -1);
+    dy = random(-0.5,0.5);
     radius= r; 
     stroke(174, 244, 250, 75);
     fill(174, 244, 250, 75);
