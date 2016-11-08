@@ -1,23 +1,12 @@
-//<script language="javascript" type="text/javascript" src="path/to/p5.dom.js"></script>
+//Adoption Center
+//Stephanie
+//User chooses the animal he/she wants to adopt and then start over to pick another one using
+//the drop down menu. 
 
-var center;
-var bunny;
-var cat;
-var clownfish;
-var goldfish;
-var dogbed;
-var fishbowl;
-var retriever;
-var husky;
-var orangek;
-var puppy;
-var paraket;
-var siamese;
-var studio;
-var woman;
-var bubble;
+//initializing image variables
+var center,bunny,cat,clownfish,goldfish,dogbed,fishbowl,retriever,husky,orangek,puppy,paraket,siamese,studio,woman,bubble;
 
-function preload() {
+function preload() { //loading images 
   //intro
   center = loadImage("adoption_center.jpg");
   woman = loadImage("woman.png");
@@ -43,12 +32,12 @@ function preload() {
   studio = loadImage("studio.jpeg");
 }
 
-function reset(){
-  removeElements();
+function reset(){ //restart screen when user presses R 
+  removeElements(); //removes everything in order to not leave a trace of the previous sketch 
   setup();
 }
 
-function setup() {
+function setup() { 
   createCanvas(1000, 800);
   //set up intro scene 
   image(center, 0, 0, width, height);
@@ -77,14 +66,15 @@ function draw() {
 
 }
 
-function selectEvent() {
-  var item = menu.value();
-  menu.remove();
-  image(studio, 0, 0, width, height);
-  fill(255);
+function selectEvent() { //dropdown menu option events 
+  var item = menu.value(); //create the item variable 
+  menu.remove(); //removes menu list when an item is selected 
+  image(studio, 0, 0, width, height); //setup scene 
+  fill(255); //text setup 
   text("Enjoy living with your " + item + "!\nMake sure you take good care of it!", 10, height - 650);
-  text("Press R to pick another animal!",10,height-550)
-  if (item == "bunny") {
+  text("Press R to pick another animal!",10,height-550) //restart text
+  //conditionals for when each item is selected
+  if (item == "bunny") { 
     image(dogbed, width - 800, height - 200, 500, 300);
     image(bunny, width - 700, height - 250, 300, 200);
   } else if (item == "kitten") {
@@ -116,7 +106,7 @@ function selectEvent() {
   }
 }
 
-function keyPressed(){
+function keyPressed(){ //restarts the sketch
   if (key == "R" || key == "r"){
     reset();
   }
