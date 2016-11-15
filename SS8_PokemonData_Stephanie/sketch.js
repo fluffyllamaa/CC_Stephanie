@@ -12,7 +12,6 @@ function preload() {
   table = loadTable("Pokemon.csv", "csv", "header");
 }
 
-
 function setup() {
   createCanvas(800, 800);
   //sets up arrayList for the pokemon data. 
@@ -32,8 +31,8 @@ function setup() {
     SpAttack[i] = table.getNum(i, 9);
     SpDefense[i] = table.getNum(i, 10);
     Speed[i] = table.getNum(i, 11);
+    // console.log(type1);
   }
-  
 }
 
 function draw() {
@@ -115,5 +114,6 @@ function draw() {
       fill(191, 255, 255);
       ellipse(x, y, 50, 50);
     }
+
   }
 }
